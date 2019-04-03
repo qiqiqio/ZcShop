@@ -28,18 +28,18 @@ import java.util.ArrayList;
 public class FragmentTabHost extends TabHost implements
         TabHost.OnTabChangeListener {
     private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
-    private FrameLayout         mRealTabContent;
-    private Context             mContext;
+    private FrameLayout mRealTabContent;
+    private Context mContext;
     private FragmentManager mFragmentManager;
-    private int                 mContainerId;
+    private int mContainerId;
     private OnTabChangeListener mOnTabChangeListener;
-    private TabInfo             mLastTab;
-    private boolean             mAttached;
+    private TabInfo mLastTab;
+    private boolean mAttached;
 
     static final class TabInfo {
-        private final String   tag;
+        private final String tag;
         private final Class<?> clss;
-        private final Bundle   args;
+        private final Bundle args;
         private Fragment fragment;
 
         TabInfo(String _tag, Class<?> _class, Bundle _args) {
