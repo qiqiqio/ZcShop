@@ -1,6 +1,5 @@
 package com.zc.shop.activity;
 
-import android.support.v4.app.FragmentTabHost;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +16,7 @@ import com.zc.shop.fragment.FindFragment;
 import com.zc.shop.fragment.HotFragment;
 import com.zc.shop.fragment.MeFragment;
 import com.zc.shop.utils.ToastUtils;
+import com.zc.shop.widget.FragmentTabHost;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

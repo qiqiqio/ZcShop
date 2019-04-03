@@ -1,5 +1,6 @@
 package com.zc.shop.fragment;
 
+import com.zc.shop.R;
 import com.zc.shop.base.BaseFragment;
 
 public class MeFragment extends BaseFragment {
@@ -10,6 +11,6 @@ public class MeFragment extends BaseFragment {
 
     @Override
     protected int getContentResourseId() {
-        return 0;
+        return R.layout.me_fragment;
     }
 }

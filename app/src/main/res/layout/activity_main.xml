@@ -16,7 +16,7 @@
         android:background="@color/bg_color"
         />
 
-    <com.enjoyshop.widget.FragmentTabHost
+    <com.zc.shop.widget.FragmentTabHost
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,5 +29,5 @@
             android:layout_height="0dp"
             android:layout_weight="0"
             />
-    </com.enjoyshop.widget.FragmentTabHost>
+    </com.zc.shop.widget.FragmentTabHost>
 </LinearLayout>
