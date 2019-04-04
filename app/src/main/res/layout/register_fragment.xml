@@ -18,6 +18,16 @@
         android:hint="请输入手机号码" />
 
     <com.zc.shop.widget.ClearEditText
+        android:id="@+id/login_code"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:theme="@style/LoginEditText"
+        android:drawableLeft="@drawable/code"
+        android:drawablePadding="10dp"
+        android:hint="请输入验证码" />
+
+    <com.zc.shop.widget.ClearEditText
         android:id="@+id/login_pass"
         android:layout_width="300dp"
         android:theme="@style/LoginEditText"
@@ -25,32 +35,35 @@
         android:drawablePadding="10dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:hint="请输入密码"
         android:drawableLeft="@drawable/pass" />
 
-    <LinearLayout
+    <com.zc.shop.widget.ClearEditText
+        android:id="@+id/login_tradepass"
         android:layout_width="300dp"
+        android:theme="@style/LoginEditText"
         android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        >
-    <TextView
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:hint="请输入交易密码"
+        android:drawableLeft="@drawable/repass" />
+
+    <com.zc.shop.widget.ClearEditText
+        android:id="@+id/login_member"
+        android:layout_width="300dp"
+        android:theme="@style/LoginEditText"
         android:layout_height="wrap_content"
-        android:gravity="right"
-        android:text="忘记密码"
-        android:textColor="@color/red"
-        android:textSize="16sp"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp"
-        />
-    </LinearLayout>
+        android:drawablePadding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:hint="请输入邀请人"
+        android:drawableLeft="@drawable/member" />
+
 
     <Button
         android:id="@+id/btn_login"
         style="@style/bigConfirmButton"
         android:layout_margin="20dp"
-        android:text="登 录" />
+        android:text="注 册" />
 </LinearLayout>

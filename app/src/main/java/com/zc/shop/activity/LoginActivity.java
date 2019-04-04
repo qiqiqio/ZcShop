@@ -9,7 +9,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.zc.shop.R;
+import com.zc.shop.adapter.ItemFragmentAdapter;
 import com.zc.shop.base.BaseActivity;
+import com.zc.shop.fragment.LoginFragment;
+import com.zc.shop.fragment.RegisterFragment;
 import com.zc.shop.widget.NoScrollViewPager;
 
 import java.util.ArrayList;
@@ -21,6 +24,8 @@ public class LoginActivity extends BaseActivity {
 
     @BindView(R.id.login_viewpager)
     protected NoScrollViewPager viewpager;
+
+    private ItemFragmentAdapter imAdapter;
 
     private List<Fragment> mFragments;
 
@@ -39,6 +44,13 @@ public class LoginActivity extends BaseActivity {
         tablayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.red));
 
         mFragments = new ArrayList<>();
+
+        mFragments.add(new LoginFragment());
+        mFragments.add(new RegisterFragment());
+
+        imAdapter = new ItemFragmentAdapter(this.getSupportFragmentManager(), names, mFragments, con);
+        viewpager.setAdapter(imAdapter);
+        tablayout.setupWithViewPager(viewpager);
     }
 
     @Override
