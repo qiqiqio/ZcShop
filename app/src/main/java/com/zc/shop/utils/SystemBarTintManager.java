@@ -37,8 +37,9 @@ import android.widget.FrameLayout.LayoutParams;
 
 import java.lang.reflect.Method;
 
-/**系统栏背景管理器
- * Class to manage status and navigation bar tint effects when using KitKat 
+/**
+ * 系统栏背景管理器
+ * Class to manage status and navigation bar tint effects when using KitKat
  * translucent system UI modes.
  */
 public class SystemBarTintManager {
@@ -50,9 +51,9 @@ public class SystemBarTintManager {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             try {
                 @SuppressWarnings("rawtypes")
-				Class c = Class.forName("android.os.SystemProperties");
+                Class c = Class.forName("android.os.SystemProperties");
                 @SuppressWarnings("unchecked")
-				Method m = c.getDeclaredMethod("get", String.class);
+                Method m = c.getDeclaredMethod("get", String.class);
                 m.setAccessible(true);
                 sNavBarOverride = (String) m.invoke(null, "qemu.hw.mainkeys");
             } catch (Throwable e) {
@@ -131,7 +132,7 @@ public class SystemBarTintManager {
 
     /**
      * Enable tinting of the system status bar.
-     *
+     * <p>
      * If the platform is running Jelly Bean or earlier, or translucent system
      * UI modes have not been enabled in either the theme or via window flags,
      * then this method does nothing.
@@ -147,7 +148,7 @@ public class SystemBarTintManager {
 
     /**
      * Enable tinting of the system navigation bar.
-     *
+     * <p>
      * If the platform does not have soft navigation keys, is running Jelly Bean
      * or earlier, or translucent system UI modes have not been enabled in either
      * the theme or via window flags, then this method does nothing.
@@ -352,7 +353,6 @@ public class SystemBarTintManager {
     /**
      * Class which describes system bar sizing and other characteristics for the current
      * device configuration.
-     *
      */
     public static class SystemBarConfig {
 
