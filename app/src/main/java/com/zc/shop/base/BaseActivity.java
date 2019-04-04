@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.zc.shop.ZcApplication;
+import com.zc.shop.activity.LoginActivity;
 import com.zc.shop.bean.User;
 
 import butterknife.ButterKnife;
@@ -41,8 +42,8 @@ public abstract class BaseActivity extends AppCompatActivity {
                 super.startActivity(intent);
             } else {
                 ZcApplication.getInstance().putIntent(intent);
-//                Intent loginIntent = new Intent(this, LoginActivity.class);
-//                super.startActivity(intent);
+                Intent loginIntent = new Intent(this, LoginActivity.class);
+                super.startActivity(intent);
             }
 
         } else {

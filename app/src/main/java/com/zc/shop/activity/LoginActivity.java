@@ -13,6 +13,7 @@ import com.zc.shop.adapter.ItemFragmentAdapter;
 import com.zc.shop.base.BaseActivity;
 import com.zc.shop.fragment.LoginFragment;
 import com.zc.shop.fragment.RegisterFragment;
+import com.zc.shop.utils.IndicatorLineUtil;
 import com.zc.shop.widget.NoScrollViewPager;
 
 import java.util.ArrayList;
@@ -43,14 +44,22 @@ public class LoginActivity extends BaseActivity {
         tablayout.setTabTextColors(ContextCompat.getColor(this, R.color.black), ContextCompat.getColor(this, R.color.red));
         tablayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.red));
 
-        mFragments = new ArrayList<>();
+        tablayout.post(new Runnable() {
+            @Override
+            public void run() {
+                IndicatorLineUtil.setIndicator(tablayout, 40, 40);
+            }
+        });
 
-        mFragments.add(new LoginFragment());
+        mFragments = new ArrayList<>();
         mFragments.add(new RegisterFragment());
+        mFragments.add(new LoginFragment());
+
 
         imAdapter = new ItemFragmentAdapter(this.getSupportFragmentManager(), names, mFragments, con);
         viewpager.setAdapter(imAdapter);
         tablayout.setupWithViewPager(viewpager);
+        tablayout.getTabAt(1).select();
     }
 
     @Override

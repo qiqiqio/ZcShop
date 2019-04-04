@@ -11,7 +11,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         android:theme="@style/LoginEditText"
         android:drawableLeft="@drawable/mobile"
         android:drawablePadding="10dp"
@@ -25,6 +25,8 @@
         android:drawablePadding="10dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:hint="请输入密码"
+
         android:drawableLeft="@drawable/pass" />
 
     <LinearLayout
@@ -40,7 +42,7 @@
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="忘记密码"
+        android:text="忘记密码?"
         android:textColor="@color/red"
         android:textSize="16sp"
         android:paddingTop="6dp"
