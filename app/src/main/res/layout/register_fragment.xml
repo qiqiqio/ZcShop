@@ -25,6 +25,8 @@
         android:theme="@style/LoginEditText"
         android:drawableLeft="@drawable/code"
         android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+
         android:hint="请输入验证码" />
 
     <com.zc.shop.widget.ClearEditText
@@ -34,8 +36,9 @@
         android:layout_height="wrap_content"
         android:drawablePadding="10dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
         android:hint="请输入密码"
+        android:layout_marginTop="10dp"
+
         android:drawableLeft="@drawable/pass" />
 
     <com.zc.shop.widget.ClearEditText
@@ -45,8 +48,9 @@
         android:layout_height="wrap_content"
         android:drawablePadding="10dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
         android:hint="请输入交易密码"
+        android:layout_marginTop="10dp"
+
         android:drawableLeft="@drawable/repass" />
 
     <com.zc.shop.widget.ClearEditText
@@ -56,7 +60,7 @@
         android:layout_height="wrap_content"
         android:drawablePadding="10dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:hint="请输入邀请人"
         android:drawableLeft="@drawable/member" />
 
