@@ -10,6 +10,7 @@ import com.zc.shop.R;
 import com.zc.shop.adapter.ItemFragmentAdapter;
 import com.zc.shop.base.BaseFragment;
 import com.zc.shop.fragment.item.ItemFragment;
+import com.zc.shop.utils.IndicatorLineUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +34,16 @@ public class HotFragment extends BaseFragment {
     protected void init() {
 //        StatusBarUtil.setRootViewFitsSystemWindows(this.getTargetFragment().getActivity(), false);
         tablayout2.setTabMode(TabLayout.MODE_SCROLLABLE);
-        tablayout2.setTabTextColors(ContextCompat.getColor(this.getContext(), R.color.gray), ContextCompat.getColor(this.getActivity(), R.color.white));
+//        tablayout2.setTabTextColors(ContextCompat.getColor(this.getContext(), R.color.gray), ContextCompat.getColor(this.getActivity(), R.color.white));
+        tablayout2.setTabTextColors(ContextCompat.getColor(this.getContext(), R.color.black), ContextCompat.getColor(this.getContext(), R.color.red));
+        tablayout2.setSelectedTabIndicatorColor(ContextCompat.getColor(this.getContext(), R.color.red));
 
+        tablayout2.post(new Runnable() {
+            @Override
+            public void run() {
+                IndicatorLineUtil.setIndicator(tablayout2, 10, 10);
+            }
+        });
 
         mFragments = new ArrayList<>();
         mFragments.add(new ItemFragment());

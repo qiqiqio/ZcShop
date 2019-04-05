@@ -3,31 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
+    android:background="@color/white"
     android:orientation="vertical"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:orientation="horizontal"
         android:background="@drawable/banner"
         >
         <EditText
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:background="@drawable/searchview_line"
+            android:drawablePadding="10dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
             android:drawableLeft="@drawable/search2"
             android:textColor="#008A00"
-            android:textSize="28px"
+            android:textSize="40px"
             android:hint="请输入商品"
             />
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="50dp"
+            android:scaleType="center"
             android:layout_marginTop="30dp"
             android:src="@drawable/message2"/>
 
@@ -36,14 +40,18 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/my_tablayout"
         android:layout_width="match_parent"
+        android:layout_marginTop="-80dp"
         android:layout_height="wrap_content"
         app:tabIndicatorColor="?attr/colorPrimary"
         app:tabMode="fixed"
+        android:background="@color/white"
         app:tabSelectedTextColor="?attr/colorPrimary"
         app:tabTextColor="#000000" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/my_viewpager"
+        android:paddingTop="10dp"
+        android:background="@color/gainsboro"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

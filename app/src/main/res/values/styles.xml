@@ -9,6 +9,8 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="android:listDivider">@drawable/md_divider</item>
     </style>
 
     <style name="fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
@@ -54,4 +56,20 @@
         <item name="android:background">@drawable/bg_btn_style_red_small</item>
     </style>
 
+    <style name="meSmallButton">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/white_color_selector</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">28dp</item>
+    </style>
+    <style name="meSmallRedButton" parent="@style/meSmallButton">
+        <item name="android:background">@drawable/me_btn_style_green_small</item>
+    </style>
+    <style name="meSmallRedButton2" parent="@style/meSmallButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:background">@drawable/me_btn_style_yellow_small</item>
+    </style>
+    <style name="meSmallRedButton3" parent="@style/meSmallButton">
+        <item name="android:background">@drawable/me_btn_style_red_small</item>
+    </style>
 </resources>

@@ -9,6 +9,7 @@ import com.zc.shop.R;
 import com.zc.shop.adapter.RecyclerAdapter;
 import com.zc.shop.base.BaseFragment;
 import com.zc.shop.bean.Goods;
+import com.zc.shop.widget.MDGridRvDividerDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,7 @@ public class ItemFragment extends BaseFragment implements RecyclerAdapter.OnItem
 
         //设置为垂直布局，这也是默认的
         gridLayoutManager.setOrientation(OrientationHelper.VERTICAL);
-
+        mRecyclerView.addItemDecoration(new MDGridRvDividerDecoration(this.getContext()));
         RecyclerAdapter adapter = new RecyclerAdapter(this.getContext(), getData());
         mRecyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(this);//将接口传递到数据产生的地方
@@ -51,13 +52,13 @@ public class ItemFragment extends BaseFragment implements RecyclerAdapter.OnItem
         goods1.setName("商品1");
 
         Goods goods2=new Goods();
-        goods1.setName("商品12");
+        goods2.setName("商品12");
 
         Goods goods3=new Goods();
-        goods1.setName("商品13");
+        goods3.setName("商品13");
 
         Goods goods4=new Goods();
-        goods1.setName("商品14");
+        goods4.setName("商品14");
 
         list.add(goods1);
         list.add(goods2);

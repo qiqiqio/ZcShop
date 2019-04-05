@@ -309,5 +309,23 @@
     <color name="red_btn_color_pressed">#ffd24242</color>
     <color name="red_btn_color_disable">#7fff5454</color>
 
+    <color name="app_green">#ff45c01a</color>
+    <color name="app_green_alpha">#7f45c01a</color>
+
+    <item type="color" name="green_btn_color_normal">@color/app_green</item>
+
+    <item type="color" name="green_btn_color_disable">@color/app_green_alpha</item>
+
+    <color name="green_btn_color_pressed">#ff298409</color>
+
+
+    <color name="app_yellow">#ff9428</color>
+    <color name="app_yellow_alpha">#ff9428</color>
+
+    <item type="color" name="yellow_btn_color_normal">@color/app_yellow</item>
+
+    <item type="color" name="yellow_btn_color_disable">@color/app_yellow_alpha</item>
+
+    <color name="yellow_btn_color_pressed">#cd853f</color>
 
 </resources>
