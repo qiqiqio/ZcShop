@@ -4,26 +4,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:layout_width="match_parent"
+        android:background="@drawable/me_bac"
+        android:orientation="horizontal">
+
+        <com.zc.shop.widget.Circleimageview
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:src="@drawable/touxiang1"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_height="match_parent"
-            android:src="@drawable/me_bac"/>
+            android:orientation="vertical">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称名称"
+                android:textColor="@color/white"
+                android:gravity="bottom"
+                android:textSize="15dp" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前状态:在线"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/me_account"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="-50dp"
         android:background="@color/white"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -33,113 +62,127 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="账户积分"
-                    android:textSize="14dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="166.00"
-                    android:textSize="14dp"
                     android:layout_gravity="center"
-                    android:textColor="@color/red"/>
+                    android:text="166.00"
+                    android:textColor="@color/red"
+                    android:textSize="14dp" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
 
+            <LinearLayout
                 android:layout_width="1dp"
+
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="账户余额"
-                    android:textSize="14dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="166.00"
-                    android:textSize="14dp"
                     android:layout_gravity="center"
-                    android:textColor="@color/dodgerblue"/>
+                    android:text="166.00"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="14dp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="账户配额"
-                    android:textSize="14dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="166.00"
-                    android:textSize="14dp"
                     android:layout_gravity="center"
-                    android:textColor="@color/chocolate"/>
+                    android:text="166.00"
+                    android:textColor="@color/chocolate"
+                    android:textSize="14dp" />
             </LinearLayout>
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
+            android:layout_height="1px"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_height="1px"
             android:background="@color/mistyrose"></View>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <Button
                     android:id="@+id/btn_reSend"
                     style="@style/meSmallRedButton"
                     android:layout_gravity="center"
                     android:text="充值" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-            <Button
-                android:id="@+id/btn_reSend1"
-                style="@style/meSmallRedButton2"
-                android:layout_gravity="center"
-                android:text="余额划转" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-            <Button
-                android:id="@+id/btn_reSend2"
-                style="@style/meSmallRedButton3"
-                android:layout_gravity="center"
 
-                android:text="提现" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_reSend1"
+                    style="@style/meSmallRedButton2"
+                    android:layout_gravity="center"
+                    android:text="余额划转" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_reSend2"
+                    style="@style/meSmallRedButton3"
+                    android:layout_gravity="center"
+
+                    android:text="提现" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -147,29 +190,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/my_order"
+
         android:layout_marginTop="10dp"
         android:background="@color/white"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp">
+
             <TextView
-                android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我的订单"
-                android:textSize="15dp"
                 android:layout_gravity="left|center_vertical"
-                android:textColor="@color/black"/>
+                android:layout_marginLeft="20dp"
+                android:text="我的订单"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
+            android:layout_height="1px"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_height="1px"
             android:background="@color/mistyrose"></View>
 
         <LinearLayout
@@ -178,67 +225,75 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="center"
-                    android:src="@drawable/me_1_1"/>
+                    android:src="@drawable/me_1_1" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="积分订单"
-                    android:textSize="12dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:gravity="center"
 
+            <LinearLayout
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/me_1_2"/>
+                    android:src="@drawable/me_1_2" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="零售订单"
-                    android:textSize="12dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:gravity="center"
 
+            <LinearLayout
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/me_1_3"/>
+                    android:src="@drawable/me_1_3" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="批发订单"
-                    android:textSize="12dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -249,29 +304,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="@color/white"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp">
+
             <TextView
-                android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
                 android:text="基本信息"
-                android:textSize="15dp"
-                android:layout_gravity="left|center_vertical"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
+            android:layout_height="1px"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_height="1px"
             android:background="@color/mistyrose"></View>
 
         <LinearLayout
@@ -281,68 +338,79 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="1dp"
-                android:gravity="center"
-
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/my_info"
+
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/me_2_1"/>
+                    android:src="@drawable/me_2_1" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="个人资料"
-                    android:textSize="12dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:gravity="center"
 
+            <LinearLayout
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+
+                android:id="@+id/my_team"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/me_2_2"/>
+                    android:src="@drawable/me_2_2" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="团队成员"
-                    android:textSize="12dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:gravity="center"
 
+            <LinearLayout
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+                android:id="@+id/my_location"
+
+                android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/me_2_3"/>
+                    android:src="@drawable/me_2_3" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="发货地址"
-                    android:textSize="12dp"
                     android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:text="发货地址"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -352,29 +420,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:background="@color/white"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp">
+
             <TextView
-                android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="客户服务"
-                android:textSize="15dp"
                 android:layout_gravity="left|center_vertical"
-                android:textColor="@color/black"/>
+                android:layout_marginLeft="20dp"
+                android:text="客户服务"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
+            android:layout_height="1px"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_height="1px"
             android:background="@color/mistyrose"></View>
 
         <LinearLayout
@@ -384,53 +454,59 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_weight="1"
                 android:layout_width="1dp"
-                android:gravity="center"
-
                 android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/me_3_1"/>
+                    android:src="@drawable/me_3_1" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="客户反馈"
-                    android:textSize="12dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:gravity="center"
 
+            <LinearLayout
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
-                    android:src="@drawable/me_3_2"/>
+                    android:src="@drawable/me_3_2" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="系统公告"
-                    android:textSize="12dp"
                     android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:text="系统公告"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
 
+            <LinearLayout
                 android:layout_width="1dp"
+
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
             </LinearLayout>

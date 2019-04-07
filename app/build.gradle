@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.zc.shop"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -33,6 +33,9 @@ dependencies {
     implementation 'com.zhy:okhttputils:2.6.2'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'com.cjj.materialrefeshlayout:library:1.3.0'
+
+    implementation 'androidx.annotation:annotation:1.0.1'
+
 
 
 

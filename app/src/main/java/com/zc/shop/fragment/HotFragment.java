@@ -65,4 +65,5 @@ public class HotFragment extends BaseFragment {
     protected int getContentResourseId() {
         return R.layout.hot_fragment;
     }
+
 }
