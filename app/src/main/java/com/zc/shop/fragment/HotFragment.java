@@ -1,12 +1,14 @@
 package com.zc.shop.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 
 import com.zc.shop.R;
+import com.zc.shop.activity.HomeNoticeActivity;
 import com.zc.shop.adapter.ItemFragmentAdapter;
 import com.zc.shop.base.BaseFragment;
 import com.zc.shop.fragment.item.ItemFragment;
@@ -33,6 +35,8 @@ public class HotFragment extends BaseFragment {
     @Override
     protected void init() {
 //        StatusBarUtil.setRootViewFitsSystemWindows(this.getTargetFragment().getActivity(), false);
+
+        con=this.getContext();
         tablayout2.setTabMode(TabLayout.MODE_SCROLLABLE);
 //        tablayout2.setTabTextColors(ContextCompat.getColor(this.getContext(), R.color.gray), ContextCompat.getColor(this.getActivity(), R.color.white));
         tablayout2.setTabTextColors(ContextCompat.getColor(this.getContext(), R.color.black), ContextCompat.getColor(this.getContext(), R.color.red));
@@ -59,6 +63,20 @@ public class HotFragment extends BaseFragment {
         imAdapter = new ItemFragmentAdapter(getChildFragmentManager(), names, mFragments, con);
         viewpager.setAdapter(imAdapter);
         tablayout2.setupWithViewPager(viewpager);
+        Intent intent = new Intent();
+        intent.setClass(con,HomeNoticeActivity.class);
+        startActivity(intent);
+
+    }
+
+    class ThreadAppUpdate implements Runnable{
+
+        @Override
+        public void run() {
+            Intent intent = new Intent();
+            intent.setClass(con,HomeNoticeActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -66,4 +84,10 @@ public class HotFragment extends BaseFragment {
         return R.layout.hot_fragment;
     }
 
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        Thread thread = new Thread(new ThreadAppUpdate());
+//        thread.start();
+//    }
 }

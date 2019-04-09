@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="335dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/layout_shape"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/notice_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:src="@drawable/close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/home_notice"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="在Android中经常会遇到需要使用D在Android中经常会遇到需要使用Dialog风格弹出框的ac在Android中经常会遇到需要使用Dialog风格弹出框的acialog风格弹出框的ac" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/midRedButton"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="查看公告" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

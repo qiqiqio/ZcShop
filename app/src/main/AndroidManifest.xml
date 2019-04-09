@@ -40,7 +40,11 @@
             android:name=".activity.MyTeamActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-
+        <activity
+            android:name=".activity.HomeNoticeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/dialog_style"
+            android:screenOrientation="portrait" />
 
     </application>
 </manifest>

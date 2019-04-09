@@ -1,5 +1,6 @@
 package com.zc.shop.activity;
 
+import android.content.Intent;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,7 +71,6 @@ public class MainActivity extends BaseActivity {
 
         mTabhost.getTabWidget().setShowDividers(LinearLayout.SHOW_DIVIDER_NONE);
         mTabhost.setCurrentTab(0);           //默认选中第0个
-
     }
 
     private View buildIndicator(Tab tab) {
